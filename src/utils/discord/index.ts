@@ -1,5 +1,7 @@
 import * as Discord from "discord.js";
 
+import { messageGateway } from "./messageGateway";
+
 interface A {
   serverToken: string;
 }
@@ -20,6 +22,8 @@ const connectToDiscordServer = ({ serverToken }: A): Return => {
       const client = new Discord.Client();
 
       await client.login(serverToken);
+
+      messageGateway({ client });
 
       res(client);
     } catch (error) {

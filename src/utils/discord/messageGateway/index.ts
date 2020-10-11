@@ -1,5 +1,7 @@
 import { Client } from "discord.js";
 
+import { experienceCollector } from "utils/discord/controllers/experienceCollector";
+
 import { profileController } from "../controllers/profile";
 
 interface A {
@@ -11,14 +13,16 @@ interface A {
  * which should happen when lorekeeper reads a message.
  */
 const messageGateway = ({ client }: A) => {
-  client.on("message", (message) => {
+  client.on("message", async (message) => {
     if (message.author.id === client.user.id) {
       return null;
     }
 
-    console.log("message received...");
+    await experienceCollector({
+      message,
+    });
 
-    profileController({
+    await profileController({
       message,
     });
   });

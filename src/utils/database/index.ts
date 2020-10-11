@@ -15,6 +15,7 @@ const connectToDatabase = () => {
     connectionString,
     {
       useNewUrlParser: true,
+      useFindAndModify: true,
     },
     (err: any) => {
       if (err) {

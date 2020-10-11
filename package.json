@@ -1,8 +1,13 @@
 {
   "name": "lorekeeper-app",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
   "license": "MIT",
+  "author": {
+    "email": "trevorkirpaul@gmail.com",
+    "name": "Trevor Kirpaul",
+    "url": "https://www.trevorkirpaul.com"
+  },
   "scripts": {
     "build": "rollup --config",
     "watch": "rollup --config -w",

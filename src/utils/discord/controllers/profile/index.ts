@@ -9,11 +9,12 @@ interface A {
   message: Message;
 }
 
+/**
+ * This controllers contains all commands
+ * related to the Profile feature.
+ */
 const profileController = ({ message }: A) => {
   const { createProfileCommand, getProfileCommand } = COMMANDS;
-
-  console.log(getProfileCommand);
-  console.log(message.content);
 
   if (message.content === createProfileCommand) {
     createProfile({

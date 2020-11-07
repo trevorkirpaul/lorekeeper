@@ -10,5 +10,5 @@ export default {
     name: "MyBundle",
   },
   plugins: [typescript(), uglify()],
-  external: ["discord.js", "dotenv", "mongoose"],
+  external: ["discord.js", "dotenv", "lodash", "mongoose"],
 };

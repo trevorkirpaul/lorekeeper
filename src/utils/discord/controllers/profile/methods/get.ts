@@ -4,6 +4,7 @@ import Player, { PlayerDefinition } from "utils/database/models/Player";
 import { createRichEmbed } from "utils/discord/helpers/createRichEmbed";
 import { isValidPlayer } from "utils/discord/helpers/isValidPlayer";
 import { createUserTag } from "utils/discord/helpers/createUserTag";
+import { getPlayerLevel } from "utils/discord/helpers/getPlayerLevel";
 
 interface A {
   message: Message;
@@ -27,9 +28,11 @@ const getProfile = async ({ message }: A) => {
       return null;
     }
 
+    const playerLevel = getPlayerLevel({ player: profile });
+
     // create values for rich embed
     const richEmbedValuesForProfile = {
-      title: author.username,
+      title: `[${playerLevel}] ${author.username}`,
       fields: [
         { name: "Experience", value: `${profile.experiencePoints}` },
         { name: "Health", value: `${profile.stats.health}` },

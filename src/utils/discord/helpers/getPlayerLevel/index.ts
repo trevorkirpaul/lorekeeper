@@ -4,7 +4,7 @@ import { PlayerDefinition } from "utils/database/models/Player";
 
 import { isValidPlayer } from "../isValidPlayer";
 
-interface Level {
+export interface Level {
   value: Number;
   experienceNeeded: Number;
 }

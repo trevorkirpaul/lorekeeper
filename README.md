@@ -11,17 +11,28 @@ Currently there are no strict plans around contributing. If you have any comment
 ## Feature List
 
 - Tracks member's activity (chat, reactions, ect) and converts it to experience points
+
 - Skill and Talent system which affects experience gain. Member's can tailor their profile to the way they interact with the server!
 
 ## Development
 
-### Installing Locally
+# Dev Quick Start
 
-You will need to create a new Discord bot in order to get values like `LOCAL_TOKEN`.
+1. clone the repo
+2. install packages using **yarn**
+3. build dist/bundle using either the `build` or the `watch` NPM scripts
 
-### ENV Variables
+```bash
+# runs the rollup build process in "watch mode"
+$ yarn watch
 
+# runs the rollup build process once
+$ yarn build
 ```
+
+4. create a `.env`
+
+```bash
 # DISCORD VALUES / CONFIG
 LOCAL_TOKEN=--
 
@@ -31,12 +42,31 @@ DB_PASSWORD=---
 DB_NAME=---
 ```
 
-> DB values are for a mongoDB connection string
-
-### Clone, Install, Run
-
-1. clone the repo
-2. install packages using **yarn**
-3. build dist/bundle using either the `build` or the `watch` NPM scripts
-4. create a `.env` file in the project root with the values from above
 5. start the app using the `start` npm script
+
+```bash
+# runs the app using nodemon and the bundle from rollup
+$ yarn start
+```
+
+### Installing Locally
+
+You will need to create a new Discord bot in order to get values like `LOCAL_TOKEN`.
+
+### ENV Variables
+
+#### LOCAL_TOKEN
+
+Discord Bot token/secret
+
+#### DB_USERNAME
+
+Used for mongoDB
+
+#### DB_PASSWORD
+
+Used for mongoDB
+
+#### DB_NAME
+
+Used for mongoDB

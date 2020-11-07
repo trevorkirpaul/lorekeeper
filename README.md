@@ -16,7 +16,7 @@ Currently there are no strict plans around contributing. If you have any comment
 
 ## Development
 
-# Dev Quick Start
+### **Dev Quick Start**
 
 1. clone the repo
 2. install packages using **yarn**

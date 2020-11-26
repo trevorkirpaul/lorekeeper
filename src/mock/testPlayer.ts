@@ -5,6 +5,7 @@ const player: PlayerDefinition = {
   status: "test status",
   uid: "1234",
   did: "1234",
+  gold: 100,
   experiencePoints: 10000,
   achievementPoints: 100,
   skills: [],

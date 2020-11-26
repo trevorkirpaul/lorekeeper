@@ -55,6 +55,10 @@ const getProfile = async ({ message }: A) => {
             profile.experiencePoints
           } / ${getExperienceNeededForNextLevel()}`,
         },
+        {
+          name: "Gold",
+          value: `${profile.gold}`,
+        },
         { name: "Health", value: `${profile.stats.health}` },
         { name: "Mana", value: `${profile.stats.mana}` },
         { name: "Strength", value: `${profile.stats.strength}` },

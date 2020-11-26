@@ -8,6 +8,7 @@ export default {
     file: "dist/index.js",
     format: "cjs",
     name: "MyBundle",
+    sourcemap: true,
   },
   plugins: [typescript(), uglify()],
   external: ["discord.js", "dotenv", "lodash", "mongoose"],

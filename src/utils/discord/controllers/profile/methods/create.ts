@@ -8,7 +8,7 @@ interface A {
 
 /**
  * Handles all of the logic for creating a new user profile.
- * Also triggers an necessary side effects.
+ * Also triggers any necessary side effects.
  * @param a
  */
 const createProfile = async ({ message }: A) => {
@@ -21,6 +21,7 @@ const createProfile = async ({ message }: A) => {
     uid: author.id,
     experiencePoints: 0,
     achievementPoints: 0,
+    gold: 100,
     stats: {
       health: 100,
       mana: 100,

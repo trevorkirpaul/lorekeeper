@@ -14,8 +14,9 @@ const connectToDatabase = () => {
   mongoose.connect(
     connectionString,
     {
-      useNewUrlParser: true,
       useFindAndModify: true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     },
     (err: any) => {
       if (err) {

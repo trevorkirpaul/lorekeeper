@@ -7,6 +7,7 @@ export interface PlayerDefinition {
   did: string;
   experiencePoints: number;
   achievementPoints: number;
+  gold: number;
   skills: any[];
   class: any[];
   stats: {
@@ -44,6 +45,9 @@ const playerSchema = new Schema({
   achievementPoints: {
     type: Number,
     required: true,
+  },
+  gold: {
+    type: Number,
   },
   skills: [
     {

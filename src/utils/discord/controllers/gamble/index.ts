@@ -11,7 +11,7 @@ interface GambleControllerArgs {
 const gambleController = ({ message }: GambleControllerArgs) => {
   const { rollDice } = COMMANDS;
 
-  if (message.content === rollDice) {
+  if (message.content.includes(rollDice)) {
     handleRollDiceMethod({ message });
   }
 };

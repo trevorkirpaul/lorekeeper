@@ -16,7 +16,7 @@ Currently there are no strict plans around contributing. If you have any comment
 
 ## Development
 
-### **Dev Quick Start**
+### **Quick Start**
 
 1. clone the repo
 2. install packages using **yarn**
@@ -41,6 +41,8 @@ DB_USERNAME=---
 DB_PASSWORD=---
 DB_NAME=---
 ```
+
+> DB (database) values will be found within your MongoDB Atlas instance. It is highly recommended to use [Atlas](https://www.mongodb.com/cloud/atlas#:~:text=MongoDB%20Atlas%20is%20the%20global,data%20security%20and%20privacy%20standards.) to host your MongoDB instance. It's free and very powerful.
 
 5. start the app using the `start` npm script
 
